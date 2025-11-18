@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Starter HTML template" />
+    <title>My Project</title>
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><span id="first-time">This is my first time 这是我第一次</span>...</p>
+    <div id="content"></div>
+    <div id="options" class="options">
+        <button type="button" class="link-button" data-option="这是我第一次和女生约会" data-content="以前我只和男生在一起过。第二次约会的时候，我和她接吻，当晚没有人在房子里，于是我们去">和女生在一起</button>
+        <button type="button" class="link-button" data-option="This is my first time dating a Chinese" data-content="She eyes are like puppies that drops down, and ">Dating a Chinese</button>
+    </div>
+
+    
+
+    <script>
+    document.getElementById('options').addEventListener('click', function(e) {
+        const btn = e.target.closest('button');
+        const question = document.getElementById('first-time');
+        if (!btn) return;
+        question.textContent = btn.dataset.option;
+        document.getElementById('content').innerHTML = btn.dataset.content || '';
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+/* Styles for the link-like buttons in index.html */
+body{
+    padding:5%;
+}
+
+.options {
+	margin-top: 0.5rem;
+}
+
+#first-time{
+    color:rgb(233, 17, 64);
+}
+
+.link-button {
+	background: none;
+	border: none;
+	color: #0366d6;
+	padding: 0;
+	margin-right: 0.5rem;
+	text-decoration: underline;
+	cursor: pointer;
+	font: inherit;
+}
+
+.link-button:last-child {
+	margin-right: 0;
+}
+
+.link-button:focus {
+	outline: 2px solid rgba(3,102,214,0.2);
+	outline-offset: 2px;
+}
+
+/* Small utility to make the sample sentence stand out */
+body p { margin: 0; }
