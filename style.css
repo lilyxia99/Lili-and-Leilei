@@ -4,6 +4,13 @@ body{
     padding:5%;
 }
 
+.container{
+	max-width: 600px;
+	margin: auto;
+	line-height:2rem;
+	font-family: "Exo 2", sans-serif;
+}
+
 .options {
 	margin-top: 0.5rem;
 }
@@ -32,5 +39,18 @@ body{
 	outline-offset: 2px;
 }
 
-/* Small utility to make the sample sentence stand out */
-body p { margin: 0; }
+/* Animated content area: fade + slight slide up */
+#content {
+	opacity: 0;
+	transition: opacity 500ms ;
+	min-height: 1.2em; /* preserve space so layout doesn't jump */
+}
+
+#content.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* small helper for content paragraphs */
+#content p { margin: 0 0 0.6rem 0; }
+
