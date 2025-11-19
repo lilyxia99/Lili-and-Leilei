@@ -54,3 +54,27 @@ body{
 /* small helper for content paragraphs */
 #content p { margin: 0 0 0.6rem 0; }
 
+/* Utility: hide elements until they receive the `show` class */
+.hidden-until-show {
+	display: none;
+}
+/* When an element is revealed we set it to inline-block so buttons and
+   inline elements display correctly. We also use opacity to allow a quick
+   fade when possible (note: display changes cannot be transitioned). */
+.hidden-until-show.show {
+	display: inline-block;
+	opacity: 1;
+	transition: opacity 240ms ease-in;
+}
+
+/* Ensure link-like buttons reveal as inline-block for smooth layout */
+.link-button.hidden-until-show.show {
+	display: inline-block;
+}
+
+/* Provide a default hidden state with opacity 0 so the fade can apply
+   after the display is toggled by the script. */
+.hidden-until-show {
+	opacity: 0;
+}
+
